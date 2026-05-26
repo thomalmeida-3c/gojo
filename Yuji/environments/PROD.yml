@@ -1,0 +1,4 @@
+name: PROD
+variables:
+  - name: PROD
+    value: https://yuji-backend-mu.vercel.app

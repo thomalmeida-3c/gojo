@@ -5,10 +5,10 @@ info:
 
 http:
   method: get
-  url: http://localhost:3001/api/search?q=jujutsu
+  url: "{{PROD}}/api/search?q=chainsaw-man"
   params:
     - name: q
-      value: jujutsu
+      value: chainsaw-man
       type: query
 
 settings:

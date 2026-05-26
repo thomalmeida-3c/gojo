@@ -1,10 +1,12 @@
 import { Router } from "express";
 import { fetchImage } from "../lib/fetchWithHeaders.js";
+import { rateLimitedFetch } from "../lib/rateLimit.js";
 
 const router = Router();
 
 router.get("/", async (req, res) => {
   const url = req.query.url as string;
+  const referer = req.query.referer as string | undefined;
 
   if (!url) {
     res.status(400).json({ error: 'Parâmetro "url" é obrigatório' });
@@ -12,9 +14,11 @@ router.get("/", async (req, res) => {
   }
 
   try {
-    const imageRes = await fetchImage(url);
+    const imageRes = await rateLimitedFetch(() => fetchImage(url, referer));
 
     if (!imageRes.ok) {
+      const text = await imageRes.text().catch(() => "");
+      console.error(`[image] ${imageRes.status} ao buscar: ${url.slice(0, 80)}... body: ${text.slice(0, 200)}`);
       res.status(imageRes.status).json({ error: `Falha ao buscar imagem` });
       return;
     }

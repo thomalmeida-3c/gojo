@@ -5,7 +5,7 @@ info:
 
 http:
   method: get
-  url: http://localhost:3001/api/chapter?url=https://mangalivre.to/manga/jujutsu-kaisen-ptbr/capitulo-212/
+  url: "{{PROD}}/api/chapter?url=https://mangalivre.to/manga/jujutsu-kaisen-ptbr/capitulo-212/"
   params:
     - name: url
       value: https://mangalivre.to/manga/jujutsu-kaisen-ptbr/capitulo-212/
@@ -16,3 +16,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+​
