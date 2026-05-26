@@ -1,0 +1,18 @@
+info:
+  name: Search Manga
+  type: http
+  seq: 3
+
+http:
+  method: get
+  url: http://localhost:3001/api/search?q=jujutsu
+  params:
+    - name: q
+      value: jujutsu
+      type: query
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

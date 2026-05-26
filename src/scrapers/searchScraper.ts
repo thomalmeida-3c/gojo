@@ -1,6 +1,6 @@
 import * as cheerio from "cheerio";
-import { BASE_URL, fetchPage } from "../lib/fetchWithHeaders";
-import { SELECTORS } from "./selectors";
+import { BASE_URL, fetchPage } from "../lib/fetchWithHeaders.js";
+import { SELECTORS } from "./selectors.js";
 
 export interface SearchResult {
   title: string;

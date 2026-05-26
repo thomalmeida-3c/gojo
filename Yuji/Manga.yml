@@ -1,0 +1,19 @@
+info:
+  name: Manga
+  type: http
+  seq: 4
+
+http:
+  method: get
+  url: http://localhost:3001/api/manga?url=https://mangalivre.to/manga/jujutsu-kaisen-modulo/
+  params:
+    - name: url
+      value: https://mangalivre.to/manga/jujutsu-kaisen-modulo/
+      type: query
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+​

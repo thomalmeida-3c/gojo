@@ -1,0 +1,18 @@
+info:
+  name: Chapter Pages
+  type: http
+  seq: 5
+
+http:
+  method: get
+  url: http://localhost:3001/api/chapter?url=https://mangalivre.to/manga/jujutsu-kaisen-ptbr/capitulo-212/
+  params:
+    - name: url
+      value: https://mangalivre.to/manga/jujutsu-kaisen-ptbr/capitulo-212/
+      type: query
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

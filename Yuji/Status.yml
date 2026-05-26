@@ -1,0 +1,14 @@
+info:
+  name: Status
+  type: http
+
+http:
+  method: GET
+  url: http://localhost:3001/api/health
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

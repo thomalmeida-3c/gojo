@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { searchMangas } from "../scrapers/searchScraper";
-import { cache } from "../lib/cache";
-import { rateLimitedFetch } from "../lib/rateLimit";
+import { searchMangas } from "../scrapers/searchScraper.js";
+import { cache } from "../lib/cache.js";
+import { rateLimitedFetch } from "../lib/rateLimit.js";
 
 const router = Router();
 

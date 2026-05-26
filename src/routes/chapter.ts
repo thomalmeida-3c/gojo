@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { getChapterPages } from "../scrapers/chapterScraper";
-import { cache } from "../lib/cache";
-import { rateLimitedFetch } from "../lib/rateLimit";
+import { getChapterPages } from "../scrapers/chapterScraper.js";
+import { cache } from "../lib/cache.js";
+import { rateLimitedFetch } from "../lib/rateLimit.js";
 
 const router = Router();
 

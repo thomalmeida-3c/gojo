@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
-import searchRouter from "./routes/search";
-import mangaRouter from "./routes/manga";
-import chapterRouter from "./routes/chapter";
-import imageRouter from "./routes/image";
+import searchRouter from "./routes/search.js";
+import mangaRouter from "./routes/manga.js";
+import chapterRouter from "./routes/chapter.js";
+import imageRouter from "./routes/image.js";
 
 const app = express();
 

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { fetchImage } from "../lib/fetchWithHeaders";
+import { fetchImage } from "../lib/fetchWithHeaders.js";
 
 const router = Router();
 

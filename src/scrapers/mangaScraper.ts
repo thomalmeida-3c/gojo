@@ -1,6 +1,6 @@
 import * as cheerio from "cheerio";
-import { fetchPage } from "../lib/fetchWithHeaders";
-import { SELECTORS } from "./selectors";
+import { fetchPage } from "../lib/fetchWithHeaders.js";
+import { SELECTORS } from "./selectors.js";
 
 export interface MangaChapter {
   title: string;
